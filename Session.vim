@@ -13,13 +13,14 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +12 package.json
+badd +9 package.json
 badd +4 eslint.config.mjs
 badd +1 health://
 argglobal
 %argdel
-edit package.json
+edit ~/projects/desafiolatam/conquien
 argglobal
+balt package.json
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -30,11 +31,11 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 9 - ((8 * winheight(0) + 21) / 43)
+let s:l = 11 - ((10 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 9
+keepjumps 11
 normal! 0
 lcd ~/projects/desafiolatam/conquien
 tabnext 1
